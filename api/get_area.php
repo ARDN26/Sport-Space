@@ -8,7 +8,7 @@ $result = mysqli_query($conn, $query);
 $areas = [];
 while ($row = mysqli_fetch_assoc($result)) {
     // Gabungkan path foto
-    $row['foto'] = '../asset/Foto Area/' . $row['foto'];
+    $row['foto'] = '../../asset/Foto Area/' . $row['foto'];
     $areas[] = $row;
 }
 echo json_encode($areas);
